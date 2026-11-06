@@ -1,0 +1,11 @@
+{
+  "name": "kosen-massage",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Kosen Massage – LINE LIFF booking app (Khon Kaen, 15 beds)",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

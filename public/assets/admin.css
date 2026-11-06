@@ -1,0 +1,57 @@
+body.admin #app { max-width: none; }
+.login { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+.login form { width: 100%; max-width: 360px; }
+
+.a-top { display: flex; align-items: center; gap: 16px; padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--line); flex-wrap: wrap; position: sticky; top: 0; z-index: 20; }
+.a-tabs { display: flex; gap: 4px; flex: 1; }
+.a-tabs button { border: 0; background: none; padding: 8px 14px; border-radius: 10px; color: var(--muted); font-weight: 500; }
+.a-tabs button.active { background: var(--green-soft); color: var(--green); }
+.a-actions { display: flex; gap: 8px; }
+.a-actions .btn { padding: 9px 16px; }
+.badge { background: var(--clay); color: #fff; border-radius: 999px; font-size: 12px; padding: 0 7px; margin-left: 4px; }
+
+.a-bar { display: flex; gap: 8px; align-items: center; padding: 12px 20px; flex-wrap: wrap; }
+.a-bar .btn { padding: 9px 14px; }
+.a-bar .input { width: auto; padding: 8px 12px; }
+.a-stats { margin-left: auto; display: flex; gap: 16px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.a-stats b { color: var(--ink); font-size: 16px; }
+
+#a-view { padding: 0 20px 40px; }
+
+/* timeline */
+.tl { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow-x: auto; }
+.tl-inner { min-width: 1100px; position: relative; }
+.tl-head, .tl-row { display: flex; }
+.tl-head { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; z-index: 2; }
+.tl-label { flex: 0 0 90px; padding: 8px 12px; font-size: 13px; font-weight: 500; border-right: 1px solid var(--line); background: #fff; position: sticky; left: 0; z-index: 1; }
+.tl-track { flex: 1; position: relative; height: 46px; border-bottom: 1px solid #f1ece4; }
+.tl-head .tl-track { height: 32px; }
+.tl-hour { position: absolute; top: 0; bottom: 0; border-left: 1px solid #f1ece4; font-size: 11px; color: var(--muted); padding: 6px 4px; }
+.tl-now { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--clay); z-index: 3; pointer-events: none; }
+.blk { position: absolute; top: 4px; bottom: 4px; border-radius: 8px; padding: 3px 8px; font-size: 12px; line-height: 1.3; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border: 0; text-align: left; color: #fff; background: var(--green); }
+.blk small { display: block; opacity: .85; font-size: 11px; overflow: hidden; text-overflow: ellipsis; }
+.blk.pending_payment { background: #e5b25d; }
+.blk.awaiting_review { background: #6c86d1; }
+.blk.checked_in { background: #1e7a5c; box-shadow: inset 0 0 0 2px #0c3; }
+.blk.completed { background: #9aa39f; }
+.blk .buf { position: absolute; right: 0; top: 0; bottom: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,.25) 0 4px, transparent 4px 8px); }
+.legend-a { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin: 10px 0; }
+.legend-a i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+
+/* list */
+.a-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); font-size: 14px; }
+.a-table th, .a-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #f1ece4; vertical-align: top; }
+.a-table th { font-weight: 500; color: var(--muted); font-size: 13px; background: #fbf9f5; }
+.a-table tr { cursor: pointer; }
+.a-table tr:hover td { background: #fbf9f5; }
+
+.review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.review-grid .slip { width: 100%; max-height: 360px; object-fit: contain; background: #f4f1ec; border-radius: 10px; margin-top: 10px; cursor: zoom-in; }
+
+.sheet-card.wide { max-width: 640px; }
+.kv { display: grid; grid-template-columns: 110px 1fr; gap: 6px 12px; font-size: 14px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+.act-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+.act-grid .btn { padding: 10px; font-size: 14px; }
+@media (min-width: 700px) { .sheet { align-items: center; } .sheet-card { border-radius: 22px; } }

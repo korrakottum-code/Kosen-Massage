@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Kosen · หลังร้าน</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+</head>
+<body class="admin">
+  <div id="login" class="login" hidden>
+    <form class="card" id="login-form">
+      <img src="/assets/logo.svg" alt="" class="brand-logo">
+      <h2 class="mt8">Kosen · หลังร้าน</h2>
+      <p class="small muted">สำหรับพนักงาน</p>
+      <label class="field mt16"><span>อีเมล</span><input class="input" type="email" name="email" required autocomplete="username"></label>
+      <label class="field"><span>รหัสผ่าน</span><input class="input" type="password" name="password" required autocomplete="current-password"></label>
+      <button class="btn block">เข้าสู่ระบบ</button>
+      <p class="small muted mt12" id="login-msg"></p>
+    </form>
+  </div>
+
+  <div id="shell" hidden>
+    <header class="a-top">
+      <div class="brand"><img src="/assets/logo.svg" alt="" class="brand-logo"><div><div class="brand-name">Kosen · หลังร้าน</div><div class="brand-tag" id="who"></div></div></div>
+      <nav class="a-tabs">
+        <button data-view="timeline" class="active">ตารางเตียง</button>
+        <button data-view="review">รอตรวจสลิป <span class="badge" id="review-count" hidden></span></button>
+        <button data-view="list">รายการจอง</button>
+      </nav>
+      <div class="a-actions">
+        <button class="btn" data-action="walkin">+ Walk-in</button>
+        <button class="btn ghost" data-action="logout">ออก</button>
+      </div>
+    </header>
+    <div class="a-bar">
+      <button class="btn soft" data-action="day" data-d="-1">‹</button>
+      <input type="date" class="input" id="day">
+      <button class="btn soft" data-action="day" data-d="1">›</button>
+      <button class="btn ghost" data-action="today">วันนี้</button>
+      <div class="a-stats" id="stats"></div>
+    </div>
+    <main id="a-view"></main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="sheet" class="sheet" hidden><div class="sheet-card"></div></div>
+  <script type="module" src="/assets/admin.js"></script>
+</body>
+</html>

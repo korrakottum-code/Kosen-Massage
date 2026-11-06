@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2f5d50">
+  <title>Kosen Massage · จองคิวนวด</title>
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/assets/logo.svg" alt="" class="brand-logo">
+        <div>
+          <div class="brand-name" data-bind="shop_name">Kosen Massage</div>
+          <div class="brand-tag" data-bind="tagline">นวดเพื่อสุขภาพ · ขอนแก่น</div>
+        </div>
+      </div>
+      <div class="user" id="user-chip"></div>
+    </header>
+
+    <div id="demo-banner" class="demo-banner" hidden>โหมดทดลอง · ข้อมูลไม่ถูกบันทึกจริง</div>
+
+    <main id="view"></main>
+
+    <div id="cta-bar" class="cta-bar" hidden></div>
+
+    <nav class="tabbar">
+      <button data-tab="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>หน้าแรก</span></button>
+      <button data-tab="book"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>จองคิว</span></button>
+      <button data-tab="mine"><svg viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg><span>การจองของฉัน</span></button>
+      <button data-tab="shop"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>ร้าน</span></button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="sheet" class="sheet" hidden><div class="sheet-card"></div></div>
+
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
